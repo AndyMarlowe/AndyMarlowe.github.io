@@ -161,10 +161,150 @@
 <li>全是静态文件，访问速度快;</li>
 <li>免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台;</li>
 <li>可以随意绑定自己的域名， 不仔细看的话根本看不出来你的网站是基于github的;</li>
+<li>数据绝对安全，基于github的版本管理，想恢复哪个历史版本都行;</li>
+<li>博客可以轻松打包、转发、发布到其他平台;</li>
+<li>等等;</li>
 </ol>
-        
-          <a class="article-more-a" href="/2019/07/10/我的第一篇水文博客/#more">more >></a>
-        
+<h3 id="线程池示例："><a href="#线程池示例：" class="headerlink" title="线程池示例："></a>线程池示例：</h3><pre><code class="java">
+<span class="keyword">package</span> threadPool;
+
+
+
+<span class="keyword">import</span> java.io.File;
+<span class="keyword">import</span> java.io.IOException;
+<span class="keyword">import</span> java.util.ArrayList;
+<span class="keyword">import</span> java.util.List;
+<span class="keyword">import</span> java.util.Scanner;
+<span class="keyword">import</span> java.util.concurrent.*;
+
+<span class="comment">/**</span>
+<span class="comment"> * <span class="doctag">@Description</span> TODO</span>
+<span class="comment"> * <span class="doctag">@Date</span> 2019/7/2 23:17</span>
+<span class="comment"> * <span class="doctag">@Author</span> Marlowexu</span>
+<span class="comment"> * <span class="doctag">@Version</span> 1.0</span>
+<span class="comment"> */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadPoolTest</span> </span>{
+
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{
+        <span class="comment">// try-with</span>
+        <span class="keyword">try</span> (Scanner in = <span class="keyword">new</span> Scanner(System.in))
+        {
+            System.out.print(<span class="string">"Enter base directory (e.g. /usr/local/jdk5.0/src): "</span>);
+            String directory = in.nextLine();
+            System.out.print(<span class="string">"Enter keyword (e.g. volatile): "</span>);
+            String keyword = in.nextLine();
+
+            ExecutorService pool = Executors.newCachedThreadPool();
+
+            MatchCounter counter = <span class="keyword">new</span> MatchCounter(<span class="keyword">new</span> File(directory), keyword, pool);
+            Future&lt;Integer&gt; result = pool.submit(counter);
+
+            <span class="keyword">try</span>
+            {
+                System.out.println(result.get() + <span class="string">" matching files."</span>);
+            }
+            <span class="keyword">catch</span> (ExecutionException e) {
+                e.printStackTrace();
+            }
+            <span class="keyword">catch</span> (InterruptedException e)
+            {
+
+            }
+            pool.shutdown();
+
+            <span class="keyword">int</span> largestPoolSize = ((ThreadPoolExecutor) pool).getLargestPoolSize();
+            System.out.println(<span class="string">"largest pool size="</span> + largestPoolSize);
+
+        }
+    }
+
+
+
+}
+<span class="comment">/**</span>
+<span class="comment"> * This task counts the files in a directory and its subdirectories that contain a given keyword.</span>
+<span class="comment"> *</span>
+<span class="comment"> */</span>
+<span class="class"><span class="keyword">class</span> <span class="title">MatchCounter</span> <span class="keyword">implements</span>  <span class="title">Callable</span>&lt;<span class="title">Integer</span>&gt;</span>
+<span class="class"></span>{
+
+    <span class="keyword">private</span> File directory;
+    <span class="keyword">private</span> String keyword;
+    <span class="keyword">private</span> ExecutorService pool;
+    <span class="keyword">private</span> <span class="keyword">int</span> count;
+    <span class="comment">/**</span>
+<span class="comment">     * Constructs a MatchCounter</span>
+<span class="comment">     * <span class="doctag">@param</span> directory  the directory in which to start the search</span>
+<span class="comment">     * <span class="doctag">@param</span> keyword    the keyword to look for</span>
+<span class="comment">     * <span class="doctag">@param</span> pool       the thread pool for submitting subtasks</span>
+<span class="comment">     */</span>
+    <span class="function"><span class="keyword">public</span> <span class="title">MatchCounter</span><span class="params">(File directory, String keyword, ExecutorService pool)</span></span>
+<span class="function">    </span>{
+        <span class="keyword">this</span>.directory = directory;
+        <span class="keyword">this</span>.keyword = keyword;
+        <span class="keyword">this</span>.pool = pool;
+    }
+
+    <span class="meta">@Override</span>
+    <span class="function"><span class="keyword">public</span> Integer <span class="title">call</span><span class="params">()</span> </span>{
+
+
+        count = <span class="number">0</span>;
+        <span class="keyword">try</span>
+        {
+            File[] files = directory.listFiles();
+            List&lt;Future&lt;Integer&gt;&gt; results = <span class="keyword">new</span> ArrayList&lt;&gt;();
+
+            <span class="keyword">for</span>(File file : files)
+                <span class="keyword">if</span>(file.isDirectory())
+                {
+                    MatchCounter counter = <span class="keyword">new</span> MatchCounter(file, keyword, pool);
+                    Future&lt;Integer&gt; result = pool.submit(counter);
+                    results.add(result);
+
+                }
+                <span class="keyword">else</span>
+                {
+                    <span class="keyword">if</span>(search(file)) count++;
+                }
+            <span class="keyword">for</span>(Future&lt;Integer&gt; result : results)
+                <span class="keyword">try</span>
+                {
+                    count += result.get();
+
+                } <span class="keyword">catch</span> (ExecutionException e)
+                {
+                    e.printStackTrace();
+                }
+        } <span class="keyword">catch</span> (InterruptedException e){
+
+        }
+        <span class="keyword">return</span> count;
+    }
+
+    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">search</span><span class="params">(File file)</span></span>
+<span class="function">    </span>{
+        <span class="keyword">try</span>{
+            <span class="keyword">try</span>(Scanner in = <span class="keyword">new</span> Scanner(file, <span class="string">"UTF-8"</span>))
+            {
+                <span class="keyword">boolean</span> found = <span class="keyword">false</span>;
+
+                <span class="keyword">while</span> (!found &amp;&amp; in.hasNextLine())
+                {
+                    String line = in.nextLine();
+                    <span class="keyword">if</span>(line.contains(keyword)) found = <span class="keyword">true</span>;
+                }
+                <span class="keyword">return</span> found;
+            }
+        } <span class="keyword">catch</span> (IOException e)
+        {
+            <span class="keyword">return</span> <span class="keyword">false</span>;
+        }
+    }
+
+}
+</code></pre>
+
       
 
       
