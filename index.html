@@ -241,7 +241,7 @@
             String directory = in.nextLine();
             System.out.print(<span class="string">"Enter keyword (e.g. volatile): "</span>);
             String keyword = in.nextLine();
-
+&lt;!-- more --&gt;
             ExecutorService pool = Executors.newCachedThreadPool();
 
             MatchCounter counter = <span class="keyword">new</span> MatchCounter(<span class="keyword">new</span> File(directory), keyword, pool);
