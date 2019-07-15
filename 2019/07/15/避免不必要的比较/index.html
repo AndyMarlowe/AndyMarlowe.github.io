@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//litten.me">
-  <title>比学Java(Java By Comparison) 1 | marlowex&#39;s academy</title>
+  <title>JBC 1.1避免不必要的比较 | marlowex&#39;s academy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="谁应该阅读本书这本书是为初中级Java程序员准备的。它也是老师训练学生成为程序员的课堂资料。在这里，我们将向你展示一些基于最近的Java8的小窍门和把戏，如资 源处理、函数式编程以及测试。 你应该在学习过基本的Java语法后阅读本书—在你可以使用条件和循环写一些小程序以及了解了面向对象编程的基本概念之后。你应该能够写一些能够编译、运行并且解决一些小任务的代码如FizzBuzz。你应该能够实现一些">
+  <meta name="description" content="1234567891011121314151617181920212223242526272829class Laboratory &amp;#123;	Microscope microscope;		Result analyze(Sample sample) &amp;#123;		if(microscope.isInorgaic(sample) == true) &amp;#123;			return Result.">
 <meta name="keywords" content="ǰ��,js,jquery,javascript,html5,������,����Գ,������,����,���,����,��Դ,IT��վ,Developer,Programmer,Coder,Geek,html,css,css3,�û�����">
 <meta property="og:type" content="article">
-<meta property="og:title" content="比学Java(Java By Comparison) 1">
-<meta property="og:url" content="//litten.me/2019/07/12/比学Java1/index.html">
+<meta property="og:title" content="JBC 1.1避免不必要的比较">
+<meta property="og:url" content="//litten.me/2019/07/15/避免不必要的比较/index.html">
 <meta property="og:site_name" content="marlowex&#39;s academy">
-<meta property="og:description" content="谁应该阅读本书这本书是为初中级Java程序员准备的。它也是老师训练学生成为程序员的课堂资料。在这里，我们将向你展示一些基于最近的Java8的小窍门和把戏，如资 源处理、函数式编程以及测试。 你应该在学习过基本的Java语法后阅读本书—在你可以使用条件和循环写一些小程序以及了解了面向对象编程的基本概念之后。你应该能够写一些能够编译、运行并且解决一些小任务的代码如FizzBuzz。你应该能够实现一些">
+<meta property="og:description" content="1234567891011121314151617181920212223242526272829class Laboratory &amp;#123;	Microscope microscope;		Result analyze(Sample sample) &amp;#123;		if(microscope.isInorgaic(sample) == true) &amp;#123;			return Result.">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://pic1.win4000.com/wallpaper/2017-11-13/5a092ed5ce6ac.jpg">
-<meta property="og:updated_time" content="2019-07-11T17:51:29.023Z">
+<meta property="og:updated_time" content="2019-07-15T11:00:09.127Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="比学Java(Java By Comparison) 1">
-<meta name="twitter:description" content="谁应该阅读本书这本书是为初中级Java程序员准备的。它也是老师训练学生成为程序员的课堂资料。在这里，我们将向你展示一些基于最近的Java8的小窍门和把戏，如资 源处理、函数式编程以及测试。 你应该在学习过基本的Java语法后阅读本书—在你可以使用条件和循环写一些小程序以及了解了面向对象编程的基本概念之后。你应该能够写一些能够编译、运行并且解决一些小任务的代码如FizzBuzz。你应该能够实现一些">
-<meta name="twitter:image" content="http://pic1.win4000.com/wallpaper/2017-11-13/5a092ed5ce6ac.jpg">
+<meta name="twitter:title" content="JBC 1.1避免不必要的比较">
+<meta name="twitter:description" content="1234567891011121314151617181920212223242526272829class Laboratory &amp;#123;	Microscope microscope;		Result analyze(Sample sample) &amp;#123;		if(microscope.isInorgaic(sample) == true) &amp;#123;			return Result.">
   
   
     <link rel="icon" href="https://s.gravatar.com/avatar/b6afc3037a1c09020fd8c60d3e9f1981?s=80">
@@ -141,34 +139,44 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-比学Java1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-避免不必要的比较" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      比学Java(Java By Comparison) 1
+      JBC 1.1避免不必要的比较
     </h1>
   
 
         
-        <a href="/2019/07/12/比学Java1/" class="archive-article-date">
-  	<time datetime="2019-07-12T13:30:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-12</time>
+        <a href="/2019/07/15/避免不必要的比较/" class="archive-article-date">
+  	<time datetime="2019-07-15T13:30:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://pic1.win4000.com/wallpaper/2017-11-13/5a092ed5ce6ac.jpg" alt="青春" title="图文无关内容"></p>
-<h1 id="谁应该阅读本书"><a href="#谁应该阅读本书" class="headerlink" title="谁应该阅读本书"></a>谁应该阅读本书</h1><p>这本书是为初中级Java程序员准备的。它也是老师训练学生成为程序员的课堂资料。在这里，我们将向你展示一些基于最近的Java8的小窍门和把戏，如资 源处理、函数式编程以及测试。</p>
-<p>你应该在学习过基本的Java语法后阅读本书—在你可以使用条件和循环写一些小程序以及了解了面向对象编程的基本概念之后。你应该能够写一些能够编译、运行并且解决一些小任务的代码如<code>FizzBuzz</code>。你应该能够实现一些简单的算法，并且你应该知道如何使用一些基本的数据结构比如链表、队列、栈、以及映射等。毫无疑问，你还要在做这些事情的时候能够享受其中的乐趣！</p>
-<p>如果当你解决复杂问题的时候你深感满意，那么这将是个极棒的开始。但是还是要清楚这里有很多的东西去学。当你反思你的技能并认为你在Java编程方面并没有多少经验（或者更一般意义上的编程），那么你将从本书中获得最大的益处。这意味着您可能还没有培养出对整洁代码和经验丰富的开发人员应用的最佳实践的感觉。</p>
-<p>是时候改变这一切了！</p>
-<p>当然，如果你已经知道了更多关于Java的代码质量、可读性、可维护性和干净代码的高级书籍，比如Effective Java[BLU18]和代码整洁之道[MAR08]，那么你已经走了很长的路。尽管如此，你依然可以在这里找到新的东西。</p>
-<h1 id="使用本书教授整洁代码"><a href="#使用本书教授整洁代码" class="headerlink" title="使用本书教授整洁代码"></a>使用本书教授整洁代码</h1><a id="more"></a>
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Laboratory</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	Microscope microscope;</span><br><span class="line">	</span><br><span class="line">	<span class="function">Result <span class="title">analyze</span><span class="params">(Sample sample)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(microscope.isInorgaic(sample) == <span class="keyword">true</span>) &#123;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">return</span> Result.INORGANIC;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> analyzeOrganic(sample);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span>  Result <span class="title">analyzeOrganic</span><span class="params">(Sample sample)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(microscope.isHumanoid(sample) == <span class="keyword">false</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> Result.ALIEN;</span><br><span class="line">		</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">return</span> Result.HUMANOID;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>你学习写过的第一个逻辑条件可能由整数和比较运算符组成，并且一名初学者很可能会使用同样的方式来实现带布尔值的条件。<br>但是这些比较是完全不必要的-它们就像你代码中的噪音。</p>
+<p>这里你看到<code>Laboratory</code>组件的代码，它们通过两个嵌套的if-else代码块中的条件来分析<code>Sample</code>.</p>
+<p>这里的代码显式地比较布尔返回值和布尔基本类型（true和false）。这是你经常可以在初学者写的代码中看到的反模式。</p>
+<p>如果使用布尔类型以外的数据类型构造逻辑条件，比如使用整型，你需要把它们和实际值比较（比如，myNumber == 25，input &gt; 0）。<br>但是不需要对布尔型的变量和返回值也这么做。</p>
+<a id="more"></a>
+
+
+<p>相反，你已经有了可以起作用的布尔表达式。在这里没有必要把它们同布尔基本类型比较了。这种比较只会把代码变得杂乱无章并且更难于阅读。</p>
+<p>绝大多数情况下，你会发现摆脱这种不必要的比较是很容易的，不仅你的代码会更少，而且也会更容易阅读。</p>
+<p>现在检查一下如果没有这些比较，这段代码有多简单。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Laboratory</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	Microscope microscope;</span><br><span class="line"></span><br><span class="line">	<span class="class"><span class="keyword">class</span> <span class="title">Laboratory</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        Microscope microscope;</span><br><span class="line">        </span><br><span class="line">        <span class="function">Result <span class="title">analyze</span><span class="params">(Sample sample)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(microscope.isInorgaic(sample)) &#123;</span><br><span class="line"></span><br><span class="line">                        <span class="keyword">return</span> Result.INORGANIC;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        <span class="keyword">return</span> analyzeOrganic(sample);</span><br><span class="line">                &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span>  Result <span class="title">analyzeOrganic</span><span class="params">(Sample sample)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(!microscope.isHumanoid(sample) ) &#123;</span><br><span class="line">                        <span class="keyword">return</span> Result.ALIEN;</span><br><span class="line">                </span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">                        <span class="keyword">return</span> Result.HUMANOID;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里我们移除了同布尔基本值的比较。在<code>laboratory.isHumanoid(sample)</code>这种情况中，我们对表达式的值取反来保持语义。但是其他方面，代码是没有改变的。你现在可以更轻松地阅读这些条件表达式了。</p>
+<p>任何编译器都将执行这种开箱即用的删除。这两段代码在执行方面可能是没有区别的。这里的好处完全在于代码的可读性。在一些小的代码中，这仅仅是项小的修复，但是假设你正在处理一个大的代码库，可读性的每一点改进都将会有益助的！</p>
+<p>考虑<code>避免否定</code>,你可以进一步改善条件。所以请继续阅读！</p>
+<h2 id="多返回语句-vs-每个方法单返回"><a href="#多返回语句-vs-每个方法单返回" class="headerlink" title="多返回语句 vs. 每个方法单返回"></a>多返回语句 vs. 每个方法单返回</h2><p>无数的开发者时间投资（浪费）在了这样的讨论上：一个方法到底使用单返回语句还是多返回语句好？这里没有终极的对与错。每一个return语句都标记了一个方法的退出点。单一的返回点使得控制流更加结构化；你总是知道它将在哪里结束。但有时您希望尽早退出一个方法，例如，当输入参数无效时。这里，我们使用多个返回语句，因为它需要更少的代码行，况且一本书中的空间总是有限的。在你的代码中，请尝试查看是否需要提前退出，如果需要，请使用多个返回语句。</p>
 
       
 
@@ -216,18 +224,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/07/15/避免不必要的比较/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JBC 1.1避免不必要的比较
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/07/11/比学Java0/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">比学Java(Java By Comparison) 0</div>
+    <a href="/2019/07/12/比学Java1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">比学Java(Java By Comparison) 1</div>
       <i class="icon-circle-right"></i>
     </a>
   

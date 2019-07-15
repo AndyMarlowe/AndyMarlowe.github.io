@@ -140,6 +140,76 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-避免不必要的比较" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/15/避免不必要的比较/">JBC 1.1避免不必要的比较</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/15/避免不必要的比较/" class="archive-article-date">
+  	<time datetime="2019-07-15T13:30:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Laboratory</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	Microscope microscope;</span><br><span class="line">	</span><br><span class="line">	<span class="function">Result <span class="title">analyze</span><span class="params">(Sample sample)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(microscope.isInorgaic(sample) == <span class="keyword">true</span>) &#123;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">return</span> Result.INORGANIC;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> analyzeOrganic(sample);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span>  Result <span class="title">analyzeOrganic</span><span class="params">(Sample sample)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(microscope.isHumanoid(sample) == <span class="keyword">false</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> Result.ALIEN;</span><br><span class="line">		</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">return</span> Result.HUMANOID;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>你学习写过的第一个逻辑条件可能由整数和比较运算符组成，并且一名初学者很可能会使用同样的方式来实现带布尔值的条件。<br>但是这些比较是完全不必要的-它们就像你代码中的噪音。</p>
+<p>这里你看到<code>Laboratory</code>组件的代码，它们通过两个嵌套的if-else代码块中的条件来分析<code>Sample</code>.</p>
+<p>这里的代码显式地比较布尔返回值和布尔基本类型（true和false）。这是你经常可以在初学者写的代码中看到的反模式。</p>
+<p>如果使用布尔类型以外的数据类型构造逻辑条件，比如使用整型，你需要把它们和实际值比较（比如，myNumber == 25，input &gt; 0）。<br>但是不需要对布尔型的变量和返回值也这么做。</p>
+        
+          <a class="article-more-a" href="/2019/07/15/避免不必要的比较/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/15/避免不必要的比较/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-比学Java1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
