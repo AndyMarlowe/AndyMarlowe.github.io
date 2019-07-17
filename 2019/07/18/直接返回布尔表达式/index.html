@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//litten.me">
-  <title>marlowex&#39;s academy</title>
+  <title>JBC 1.3直接返回布尔表达式 | marlowex&#39;s academy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="���пƼ���ѧ09������ְ����ѶSNG���ó�����ǰ�˼��ܣ������о��ƶ��˿�����ǰ�����ܡ���רҵ�Ӿ����ʦ����Ϊ����һö��">
+  <meta name="description" content="Before: 12345678910111213141516class Astronaut &amp;#123;	String name;	int missions;	boolean isVilid()	&amp;#123;		if(missions &amp;lt; 0 || name == null || name.trim().isEmpty())&amp;#123;				return false;		&amp;#125;el">
 <meta name="keywords" content="ǰ��,js,jquery,javascript,html5,������,����Գ,������,����,���,����,��Դ,IT��վ,Developer,Programmer,Coder,Geek,html,css,css3,�û�����">
-<meta property="og:type" content="website">
-<meta property="og:title" content="marlowex&#39;s academy">
-<meta property="og:url" content="//litten.me/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JBC 1.3直接返回布尔表达式">
+<meta property="og:url" content="//litten.me/2019/07/18/直接返回布尔表达式/index.html">
 <meta property="og:site_name" content="marlowex&#39;s academy">
-<meta property="og:description" content="���пƼ���ѧ09������ְ����ѶSNG���ó�����ǰ�˼��ܣ������о��ƶ��˿�����ǰ�����ܡ���רҵ�Ӿ����ʦ����Ϊ����һö��">
+<meta property="og:description" content="Before: 12345678910111213141516class Astronaut &amp;#123;	String name;	int missions;	boolean isVilid()	&amp;#123;		if(missions &amp;lt; 0 || name == null || name.trim().isEmpty())&amp;#123;				return false;		&amp;#125;el">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-17T22:48:24.067Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="marlowex&#39;s academy">
-<meta name="twitter:description" content="���пƼ���ѧ09������ְ����ѶSNG���ó�����ǰ�˼��ܣ������о��ƶ��˿�����ǰ�����ܡ���רҵ�Ӿ����ʦ����Ϊ����һö��">
+<meta name="twitter:title" content="JBC 1.3直接返回布尔表达式">
+<meta name="twitter:description" content="Before: 12345678910111213141516class Astronaut &amp;#123;	String name;	int missions;	boolean isVilid()	&amp;#123;		if(missions &amp;lt; 0 || name == null || name.trim().isEmpty())&amp;#123;				return false;		&amp;#125;el">
   
   
     <link rel="icon" href="https://s.gravatar.com/avatar/b6afc3037a1c09020fd8c60d3e9f1981?s=80">
@@ -138,16 +139,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-直接返回布尔表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-直接返回布尔表达式" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/18/直接返回布尔表达式/">JBC 1.3直接返回布尔表达式</a>
+    <h1 class="article-title" itemprop="name">
+      JBC 1.3直接返回布尔表达式
     </h1>
   
 
@@ -180,16 +179,24 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/18/直接返回布尔表达式/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/07/18/避免否定/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JBC 1.2避免否定</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -209,349 +216,14 @@
 
 
 
-
   
-    <article id="post-避免否定" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/18/避免否定/">JBC 1.2避免否定</a>
-    </h1>
   
 
-        
-        <a href="/2019/07/18/避免否定/" class="archive-article-date">
-  	<time datetime="2019-07-18T13:30:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Before:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Laboratory</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	Microscope microscope;</span><br><span class="line">	<span class="function">Result <span class="title">analyze</span><span class="params">(Sample)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(microscope.isInorganic(sample)) </span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> Result.INORGANIC;</span><br><span class="line">		&#125;<span class="keyword">else</span> </span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> analyzeOrganic(sample);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">private</span> Result <span class="title">analyzeOrganic</span><span class="params">(Sample)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(!microscope.isHumanoid(sample))</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(!microscope.isHumanoid(sample)) </span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> Result.ALIEN;</span><br><span class="line">			&#125;<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> Result.HUMANOID;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>After:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Laboratory</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	Microscope microscope;</span><br><span class="line"></span><br><span class="line">	<span class="function">Result <span class="title">anaylze</span><span class="params">(Sample sample)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(microscope.isOrganic(sample))</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> analyzeOrganic(sample);</span><br><span class="line">		&#125; <span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">return</span> Result.INORGANIC;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> Result <span class="title">anaylzeOrganic</span><span class="params">(Sample sample)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(microscope.isHumanoid(sample)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> Result.HUMANOID;</span><br><span class="line">		&#125;<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> Result.ALIEN;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/18/避免否定/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-避免不必要的比较" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/15/避免不必要的比较/">JBC 1.1避免不必要的比较</a>
-    </h1>
   
 
-        
-        <a href="/2019/07/15/避免不必要的比较/" class="archive-article-date">
-  	<time datetime="2019-07-15T13:30:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Laboratory</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	Microscope microscope;</span><br><span class="line">	</span><br><span class="line">	<span class="function">Result <span class="title">analyze</span><span class="params">(Sample sample)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(microscope.isInorgaic(sample) == <span class="keyword">true</span>) &#123;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">return</span> Result.INORGANIC;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> analyzeOrganic(sample);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span>  Result <span class="title">analyzeOrganic</span><span class="params">(Sample sample)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(microscope.isHumanoid(sample) == <span class="keyword">false</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> Result.ALIEN;</span><br><span class="line">		</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">return</span> Result.HUMANOID;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>你学习写过的第一个逻辑条件可能由整数和比较运算符组成，并且一名初学者很可能会使用同样的方式来实现带布尔值的条件。<br>但是这些比较是完全不必要的-它们就像你代码中的噪音。</p>
-<p>这里你看到<code>Laboratory</code>组件的代码，它们通过两个嵌套的if-else代码块中的条件来分析<code>Sample</code>.</p>
-<p>这里的代码显式地比较布尔返回值和布尔基本类型（true和false）。这是你经常可以在初学者写的代码中看到的反模式。</p>
-<p>如果使用布尔类型以外的数据类型构造逻辑条件，比如使用整型，你需要把它们和实际值比较（比如，myNumber == 25，input &gt; 0）。<br>但是不需要对布尔型的变量和返回值也这么做。</p>
-        
-          <a class="article-more-a" href="/2019/07/15/避免不必要的比较/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/15/避免不必要的比较/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-比学Java1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/12/比学Java1/">比学Java(Java By Comparison) 1</a>
-    </h1>
   
 
-        
-        <a href="/2019/07/12/比学Java1/" class="archive-article-date">
-  	<time datetime="2019-07-12T13:30:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://pic1.win4000.com/wallpaper/2017-11-13/5a092ed5ce6ac.jpg" alt="青春" title="图文无关内容"></p>
-<h1 id="谁应该阅读本书"><a href="#谁应该阅读本书" class="headerlink" title="谁应该阅读本书"></a>谁应该阅读本书</h1><p>这本书是为初中级Java程序员准备的。它也是老师训练学生成为程序员的课堂资料。在这里，我们将向你展示一些基于最近的Java8的小窍门和把戏，如资 源处理、函数式编程以及测试。</p>
-<p>你应该在学习过基本的Java语法后阅读本书—在你可以使用条件和循环写一些小程序以及了解了面向对象编程的基本概念之后。你应该能够写一些能够编译、运行并且解决一些小任务的代码如<code>FizzBuzz</code>。你应该能够实现一些简单的算法，并且你应该知道如何使用一些基本的数据结构比如链表、队列、栈、以及映射等。毫无疑问，你还要在做这些事情的时候能够享受其中的乐趣！</p>
-<p>如果当你解决复杂问题的时候你深感满意，那么这将是个极棒的开始。但是还是要清楚这里有很多的东西去学。当你反思你的技能并认为你在Java编程方面并没有多少经验（或者更一般意义上的编程），那么你将从本书中获得最大的益处。这意味着您可能还没有培养出对整洁代码和经验丰富的开发人员应用的最佳实践的感觉。</p>
-<p>是时候改变这一切了！</p>
-<p>当然，如果你已经知道了更多关于Java的代码质量、可读性、可维护性和干净代码的高级书籍，比如Effective Java[BLU18]和代码整洁之道[MAR08]，那么你已经走了很长的路。尽管如此，你依然可以在这里找到新的东西。</p>
-<h1 id="使用本书教授整洁代码"><a href="#使用本书教授整洁代码" class="headerlink" title="使用本书教授整洁代码"></a>使用本书教授整洁代码</h1>
-        
-          <a class="article-more-a" href="/2019/07/12/比学Java1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/12/比学Java1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-比学Java0" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/11/比学Java0/">比学Java(Java By Comparison) 0</a>
-    </h1>
-  
-
-        
-        <a href="/2019/07/11/比学Java0/" class="archive-article-date">
-  	<time datetime="2019-07-11T13:30:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="欢迎！"><a href="#欢迎！" class="headerlink" title="欢迎！"></a>欢迎！</h1><h2 id="如果你不能为你的模式（tao-lu）提供前后对照的代码，那么你就是个骗子。"><a href="#如果你不能为你的模式（tao-lu）提供前后对照的代码，那么你就是个骗子。" class="headerlink" title="如果你不能为你的模式（tao lu）提供前后对照的代码，那么你就是个骗子。"></a><em>如果你不能为你的模式（tao lu）提供前后对照的代码，那么你就是个骗子。</em></h2><h2 id="大卫-汉森-（Ruby-on-Rails作者"><a href="#大卫-汉森-（Ruby-on-Rails作者" class="headerlink" title="大卫 汉森 （Ruby on Rails作者)"></a><em>大卫 汉森 （Ruby on Rails作者)</em></h2><pre><code>我们当然同意大卫的观点。
-如果你提出一种编程技巧，你就应该尽可能简洁地演示出你的提案如何比以前的更好。
-这种前后的方法将所有的事实放到了台面上：你可以直接对新代码同旧代码进行比较。只有在这时，你才能做出明智的决定，究竟哪个更好。</code></pre>
-        
-          <a class="article-more-a" href="/2019/07/11/比学Java0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/11/比学Java0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第一篇水文博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/10/我的第一篇水文博客/">我的第一篇水文博客^_^</a>
-    </h1>
-  
-
-        
-        <a href="/2019/07/10/我的第一篇水文博客/" class="archive-article-date">
-  	<time datetime="2019-07-10T10:30:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="线程池示例："><a href="#线程池示例：" class="headerlink" title="线程池示例："></a>线程池示例：</h2>
-        
-          <a class="article-more-a" href="/2019/07/10/我的第一篇水文博客/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/10/我的第一篇水文博客/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -574,8 +246,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
