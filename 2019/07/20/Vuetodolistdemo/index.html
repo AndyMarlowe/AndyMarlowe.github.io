@@ -6,20 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//litten.me">
-  <title>JBC 1.5避免条件中的空指针异常 | marlowex&#39;s academy</title>
+  <title>Vuetodolistdemo | marlowex&#39;s academy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="//todo">
+  <meta name="description" content="工具: win10 node npm vue-cli bootstrap(css) chrome  App.vue:1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757">
 <meta name="keywords" content="ǰ��,js,jquery,javascript,html5,������,����Գ,������,����,���,����,��Դ,IT��վ,Developer,Programmer,Coder,Geek,html,css,css3,�û�����">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JBC 1.5避免条件中的空指针异常">
-<meta property="og:url" content="//litten.me/2019/07/18/避免条件中的空指针异常/index.html">
+<meta property="og:title" content="Vuetodolistdemo">
+<meta property="og:url" content="//litten.me/2019/07/20/Vuetodolistdemo/index.html">
 <meta property="og:site_name" content="marlowex&#39;s academy">
-<meta property="og:description" content="//todo">
+<meta property="og:description" content="工具: win10 node npm vue-cli bootstrap(css) chrome  App.vue:1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-17T23:13:15.104Z">
+<meta property="og:image" content="//litten.me/2019/07/20/Vuetodolistdemo/assets/img/vuetodo1.jpg">
+<meta property="og:image" content="//litten.me/2019/07/20/Vuetodolistdemo/assets/img/vuetodo2.jpg">
+<meta property="og:image" content="//litten.me/2019/07/20/Vuetodolistdemo/assets/img/vuetodo3.jpg">
+<meta property="og:updated_time" content="2019-07-20T16:28:07.678Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JBC 1.5避免条件中的空指针异常">
-<meta name="twitter:description" content="//todo">
+<meta name="twitter:title" content="Vuetodolistdemo">
+<meta name="twitter:description" content="工具: win10 node npm vue-cli bootstrap(css) chrome  App.vue:1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757">
+<meta name="twitter:image" content="//litten.me/2019/07/20/Vuetodolistdemo/assets/img/vuetodo1.jpg">
   
   
     <link rel="icon" href="https://s.gravatar.com/avatar/b6afc3037a1c09020fd8c60d3e9f1981?s=80">
@@ -139,27 +143,52 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-避免条件中的空指针异常" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Vuetodolistdemo" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JBC 1.5避免条件中的空指针异常
+      Vuetodolistdemo
     </h1>
   
 
         
-        <a href="/2019/07/18/避免条件中的空指针异常/" class="archive-article-date">
-  	<time datetime="2019-07-18T15:50:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-18</time>
+        <a href="/2019/07/20/Vuetodolistdemo/" class="archive-article-date">
+  	<time datetime="2019-07-19T21:50:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>//todo</p>
+        <h1 id="工具"><a href="#工具" class="headerlink" title="工具:"></a>工具:</h1><ul>
+<li>win10</li>
+<li>node</li>
+<li>npm</li>
+<li>vue-cli</li>
+<li>bootstrap(css)</li>
+<li>chrome</li>
+</ul>
+<h1 id="App-vue"><a href="#App-vue" class="headerlink" title="App.vue:"></a>App.vue:</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line">    </span><br><span class="line">&lt;template&gt;</span><br><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">&lt;h4 class=&apos;bg-primary text-white text-center p-2&apos;&gt;</span><br><span class="line">&#123;&#123;name&#125;&#125;的任务清单</span><br><span class="line">&lt;/h4&gt;</span><br><span class="line">&lt;div class=&quot;container-fluid p-4&quot;&gt;</span><br><span class="line">&lt;div class=&apos;row&apos; v-if=&quot;filteredTasks.length == 0&quot;&gt;</span><br><span class="line">&lt;div class=&quot;col text-center&quot;&gt;</span><br><span class="line">&lt;b&gt;无所事事，嗯哼大佬一枚!&lt;/b&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;template v-else&gt;</span><br><span class="line">&lt;div class=&quot;row&quot;&gt;</span><br><span class="line">&lt;div class=&quot;col font-weight-bold&quot;&gt;任务&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;col-2 font-weight-bold&quot;&gt;是否完成&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;row&quot; v-for=&quot;t in filteredTasks&quot; v-bind:key=&quot;t.action&quot;&gt;</span><br><span class="line">&lt;div class=&quot;col&quot;&gt;&#123;&#123;t.action&#125;&#125;&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;col-2&quot; text-center&gt;</span><br><span class="line">&lt;input type=&quot;checkbox&quot; v-model=&quot;t.done&quot; class=&quot;form-check-input&quot;/&gt;</span><br><span class="line">&#123;&#123;t.done?&quot;是&quot;:&quot;否&quot;&#125;&#125;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;div class=&quot;row py-2&quot;&gt;</span><br><span class="line">&lt;div class=&quot;col&quot;&gt;</span><br><span class="line">&lt;input v-model=&quot;newItemText&quot; class=&quot;form-control&quot;/&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;col-2&quot;&gt;</span><br><span class="line">&lt;button class=&quot;btn btn-primary&quot; v-on:click=&quot;addNewTodo&quot;&gt;添加&lt;/button&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;row bg-secondary ppy-2 mt-2 text-white&quot;&gt;</span><br><span class="line">&lt;div class=&quot;col text-center&quot;&gt;</span><br><span class="line">&lt;input type=&quot;checkbox&quot; v-model=&quot;hideCompleted&quot; class=&quot;form-check-input&quot;&gt;</span><br><span class="line">&lt;label class=&quot;form-check-label font-weight-bold&quot;&gt;</span><br><span class="line">隐藏已完成的任务</span><br><span class="line">&lt;/label&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;col text-center&quot; &gt;</span><br><span class="line">&lt;button class=&quot;btn btn-sm btn-warning&quot; v-on:click=&quot;deleteCompleted&quot;&gt;</span><br><span class="line">删除已完成</span><br><span class="line">&lt;/button&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">name: &apos;app&apos;,</span><br><span class="line">data() &#123;</span><br><span class="line">return &#123; name: &quot;Marlowex&quot;,</span><br><span class="line">tasks: [</span><br><span class="line">],</span><br><span class="line">hideCompleted: true,</span><br><span class="line">newItemText: &quot;&quot;</span><br><span class="line">&#125;</span><br><span class="line">&#125;,</span><br><span class="line">computed: &#123;</span><br><span class="line">filteredTasks() &#123;</span><br><span class="line">return this.hideCompleted ? this.tasks.filter(t =&gt; !t.done) : this.tasks</span><br><span class="line">&#125;</span><br><span class="line">&#125;,</span><br><span class="line">methods: &#123;</span><br><span class="line">addNewTodo() &#123;</span><br><span class="line">this.tasks.push(&#123;</span><br><span class="line">action: this.newItemText,</span><br><span class="line">done:false</span><br><span class="line">&#125;);</span><br><span class="line">this.storeData();</span><br><span class="line">this.newItemText = &quot;&quot;</span><br><span class="line">&#125;,</span><br><span class="line">storeData() &#123;</span><br><span class="line">localStorage.setItem(&quot;todos&quot;, JSON.stringify(this.tasks));</span><br><span class="line">&#125;,</span><br><span class="line">deleteCompleted() &#123;</span><br><span class="line">this.tasks = this.tasks.filter(t =&gt; !t.done);</span><br><span class="line">this.storeData();</span><br><span class="line">&#125;</span><br><span class="line">&#125;,</span><br><span class="line">created() &#123;</span><br><span class="line">let data = localStorage.getItem(&quot;todos&quot;);</span><br><span class="line">if (data != null) &#123;</span><br><span class="line">this.tasks = JSON.parse(data);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="main-js"><a href="#main-js" class="headerlink" title="main.js:"></a>main.js:</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App.vue'</span></span><br><span class="line">Vue.config.productionTip = <span class="literal">false</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">"bootstrap/dist/css/bootstrap.min.css"</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">render: <span class="function"><span class="params">h</span> =&gt;</span> h(App),</span><br><span class="line">&#125;).$mount(<span class="string">'#app'</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="运行："><a href="#运行：" class="headerlink" title="运行："></a>运行：</h1>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm  run serve</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+<h1 id="运行效果："><a href="#运行效果：" class="headerlink" title="运行效果："></a>运行效果：</h1><img src="assets/img/vuetodo1.jpg">
+<img src="assets/img/vuetodo2.jpg">
+<img src="assets/img/vuetodo3.jpg">
+
+
+
+
 
       
 
@@ -212,18 +241,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/07/18/避免switch故障/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JBC 1.6避免switch故障
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/07/18/直接返回布尔表达式/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JBC 1.3直接返回布尔表达式</div>
+    <a href="/2019/07/19/简化条件表达式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JBC 1.4简化条件表达式</div>
       <i class="icon-circle-right"></i>
     </a>
   

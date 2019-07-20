@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="//litten.me">
   <title>JBC 1.4简化条件表达式 | marlowex&#39;s academy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="//todo">
+  <meta name="description" content="Before: 12345678910111213141516171819class SpaceShip&amp;#123;	Crew crew;	FuelTank fuelTank;	Hull hull;	Navigator navigator;	OxgenTank oxygenTank;	boolean willCrewSurvive()	&amp;#123;		return hull.holes == 0">
 <meta name="keywords" content="ǰ��,js,jquery,javascript,html5,������,����Գ,������,����,���,����,��Դ,IT��վ,Developer,Programmer,Coder,Geek,html,css,css3,�û�����">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JBC 1.4简化条件表达式">
-<meta property="og:url" content="//litten.me/2019/07/18/简化条件表达式/index.html">
+<meta property="og:url" content="//litten.me/2019/07/19/简化条件表达式/index.html">
 <meta property="og:site_name" content="marlowex&#39;s academy">
-<meta property="og:description" content="//todo">
+<meta property="og:description" content="Before: 12345678910111213141516171819class SpaceShip&amp;#123;	Crew crew;	FuelTank fuelTank;	Hull hull;	Navigator navigator;	OxgenTank oxygenTank;	boolean willCrewSurvive()	&amp;#123;		return hull.holes == 0">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-17T23:07:14.828Z">
+<meta property="og:updated_time" content="2019-07-18T15:05:47.058Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JBC 1.4简化条件表达式">
-<meta name="twitter:description" content="//todo">
+<meta name="twitter:description" content="Before: 12345678910111213141516171819class SpaceShip&amp;#123;	Crew crew;	FuelTank fuelTank;	Hull hull;	Navigator navigator;	OxgenTank oxygenTank;	boolean willCrewSurvive()	&amp;#123;		return hull.holes == 0">
   
   
     <link rel="icon" href="https://s.gravatar.com/avatar/b6afc3037a1c09020fd8c60d3e9f1981?s=80">
@@ -151,15 +151,21 @@
   
 
         
-        <a href="/2019/07/18/简化条件表达式/" class="archive-article-date">
-  	<time datetime="2019-07-18T15:30:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-18</time>
+        <a href="/2019/07/19/简化条件表达式/" class="archive-article-date">
+  	<time datetime="2019-07-19T02:30:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>//todo</p>
+        <p>Before:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SpaceShip</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	Crew crew;</span><br><span class="line">	FuelTank fuelTank;</span><br><span class="line">	Hull hull;</span><br><span class="line">	Navigator navigator;</span><br><span class="line">	OxgenTank oxygenTank;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">boolean</span> <span class="title">willCrewSurvive</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> hull.holes == <span class="number">0</span> &amp;&amp;</span><br><span class="line">			fuelTank.fuel &gt;= navigator.requiredFuelToEarth() &amp;&amp;</span><br><span class="line">			oxygenTank.lastFor(crew.size) &gt; navigatorr.timeToEarth();</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>After:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SpaceShip</span> </span>&#123;</span><br><span class="line">	Crew crew;</span><br><span class="line">	FuelTank fuelTank;</span><br><span class="line">	Hull hull;</span><br><span class="line">	Navigator navigator;</span><br><span class="line">	OxygenTank oxygenTank;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">boolean</span> <span class="title">willCrewSurvive</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">boolean</span> hasEnoughResources = hasEnoughFuel() &amp;&amp; hasEnoughOxygen();</span><br><span class="line">		<span class="keyword">return</span> hull.isIntact() &amp;&amp; hasEnoughResources;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">hasEnoughOxygen</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> oxygenTank.lastFor(crew.size) &gt; navigator.timeToEarth();</span><br><span class="line">			</span><br><span class="line">	&#125;</span><br><span class="line">        </span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">hasEnoughFuel</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> fuekTank.fuel &gt;= navigator.requiredFuelToEarth();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="小括号也是有帮助的："><a href="#小括号也是有帮助的：" class="headerlink" title="小括号也是有帮助的："></a>小括号也是有帮助的：</h2><p>布尔条件也会变得复杂，尤其是缺少括号的情况下。许多开发人员包括我们自己，不将布尔运算符的优先级内联化，需要花一点时间来确定x&amp;&amp;y|| z是否表示（x&amp;&amp;y）|| z或 x &amp;&amp;（y|| z）或者你原来就知道&amp;&amp;总是在之前被计算吗？</p>
 
       
 
@@ -212,18 +218,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/07/18/避免条件中的空指针异常/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/07/20/Vuetodolistdemo/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          JBC 1.5避免条件中的空指针异常
+          Vuetodolistdemo
         
       </div>
     </a>
   
   
-    <a href="/2019/07/18/直接返回布尔表达式/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JBC 1.3直接返回布尔表达式</div>
+    <a href="/2019/07/18/vue购物车demo备查/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue购物车demo备查</div>
       <i class="icon-circle-right"></i>
     </a>
   
