@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="//litten.me">
   <title>我的第一篇水文博客^_^ | marlowex&#39;s academy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="线程池示例：">
+  <meta name="description" content="&amp;#x7EBF;&amp;#x7A0B;&amp;#x6C60;&amp;#x793A;&amp;#x4F8B;&amp;#xFF1A;">
 <meta name="keywords" content="ǰ��,js,jquery,javascript,html5,������,����Գ,������,����,���,����,��Դ,IT��վ,Developer,Programmer,Coder,Geek,html,css,css3,�û�����">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我的第一篇水文博客^_^">
 <meta property="og:url" content="//litten.me/2019/07/10/我的第一篇水文博客/index.html">
 <meta property="og:site_name" content="marlowex&#39;s academy">
-<meta property="og:description" content="线程池示例：">
+<meta property="og:description" content="&amp;#x7EBF;&amp;#x7A0B;&amp;#x6C60;&amp;#x793A;&amp;#x4F8B;&amp;#xFF1A;">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://public.3.basecamp.com/p/Eqt6DuyqWDTS3pfdGMRQ6VNX">
 <meta property="og:updated_time" content="2019-07-16T08:45:29.950Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的第一篇水文博客^_^">
-<meta name="twitter:description" content="线程池示例：">
+<meta name="twitter:description" content="&amp;#x7EBF;&amp;#x7A0B;&amp;#x6C60;&amp;#x793A;&amp;#x4F8B;&amp;#xFF1A;">
 <meta name="twitter:image" content="https://public.3.basecamp.com/p/Eqt6DuyqWDTS3pfdGMRQ6VNX">
   
   
@@ -161,7 +161,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="线程池示例："><a href="#线程池示例：" class="headerlink" title="线程池示例："></a>线程池示例：</h2><a id="more"></a>
+        <h2 id="&#x7EBF;&#x7A0B;&#x6C60;&#x793A;&#x4F8B;&#xFF1A;"><a href="#&#x7EBF;&#x7A0B;&#x6C60;&#x793A;&#x4F8B;&#xFF1A;" class="headerlink" title="&#x7EBF;&#x7A0B;&#x6C60;&#x793A;&#x4F8B;&#xFF1A;"></a>&#x7EBF;&#x7A0B;&#x6C60;&#x793A;&#x4F8B;&#xFF1A;</h2><a id="more"></a>
 <pre><code class="java">
 <span class="keyword">package</span> threadPool;
 
@@ -187,9 +187,9 @@
         <span class="comment">// try-with</span>
         <span class="keyword">try</span> (Scanner in = <span class="keyword">new</span> Scanner(System.in))
         {
-            System.out.print(<span class="string">"Enter base directory (e.g. /usr/local/jdk5.0/src): "</span>);
+            System.out.print(<span class="string">&quot;Enter base directory (e.g. /usr/local/jdk5.0/src): &quot;</span>);
             String directory = in.nextLine();
-            System.out.print(<span class="string">"Enter keyword (e.g. volatile): "</span>);
+            System.out.print(<span class="string">&quot;Enter keyword (e.g. volatile): &quot;</span>);
             String keyword = in.nextLine();
 
             ExecutorService pool = Executors.newCachedThreadPool();
@@ -199,7 +199,7 @@
 
             <span class="keyword">try</span>
             {
-                System.out.println(result.get() + <span class="string">" matching files."</span>);
+                System.out.println(result.get() + <span class="string">&quot; matching files.&quot;</span>);
             }
             <span class="keyword">catch</span> (ExecutionException e) {
                 e.printStackTrace();
@@ -211,7 +211,7 @@
             pool.shutdown();
 
             <span class="keyword">int</span> largestPoolSize = ((ThreadPoolExecutor) pool).getLargestPoolSize();
-            System.out.println(<span class="string">"largest pool size="</span> + largestPoolSize);
+            System.out.println(<span class="string">&quot;largest pool size=&quot;</span> + largestPoolSize);
 
         }
     }
@@ -283,7 +283,7 @@
     <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">search</span><span class="params">(File file)</span></span>
 <span class="function">    </span>{
         <span class="keyword">try</span>{
-            <span class="keyword">try</span>(Scanner in = <span class="keyword">new</span> Scanner(file, <span class="string">"UTF-8"</span>))
+            <span class="keyword">try</span>(Scanner in = <span class="keyword">new</span> Scanner(file, <span class="string">&quot;UTF-8&quot;</span>))
             {
                 <span class="keyword">boolean</span> found = <span class="keyword">false</span>;
 
@@ -302,7 +302,7 @@
 
 }
 </code></pre>
-<p><img src="https://public.3.basecamp.com/p/Eqt6DuyqWDTS3pfdGMRQ6VNX" alt="赞赏码" title="微信"></p>
+<p><img src="https://public.3.basecamp.com/p/Eqt6DuyqWDTS3pfdGMRQ6VNX" alt="&#x8D5E;&#x8D4F;&#x7801;" title="&#x5FAE;&#x4FE1;"></p>
 
       
 
