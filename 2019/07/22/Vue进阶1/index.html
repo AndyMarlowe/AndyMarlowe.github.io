@@ -60,6 +60,8 @@
 			
 				<li><a href="/">主页</a></li>
 	        
+				<li><a href="/archives/index.html">归档</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -110,6 +112,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -124,7 +128,9 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 100%"><a href="/">主页</a></li>
+					<li style="width: 50%"><a href="/">主页</a></li>
+		        
+					<li style="width: 50%"><a href="/archives/index.html">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -170,7 +176,7 @@
 <div id="decryptionError" style="display: none;">Incorrect Password!</div>
 <div id="noContentError" style="display: none;">No content to display!</div>
 <div id="encrypt-blog" style="display:none">
-U2FsdGVkX18zbhL5yl1E76KG6KcaiWOGEdJ90MLo1AAdwqsKkj2hojkfOqbA0BXevZ3u93XokMK/r1CaTzDX7pC69cleW81Tw6I0P1VvkcwsvVj4tq0CFhx2UrtD2qJ89JL3G2zVUMSEmaDAnSeugXSeEivJjUuR/0u1JUs53BSFQRbPMEVGz+uYgDZx4QsMQrsLE0CqwYHFL/FCmdJZ+6JzptvWbyF1wwC7eWyygZkitu1hjUljH+/UxdKSNMMYw9/Cgsf0lSc5QtoGRrkGpqI8kzpa5pAZj2x7zfINq+ytm7gL34zgvXyN0P91gCRRppO/lG9cn19ObK0qgEau/MappHJKd2giDAJmlL7Ml852Pw5XTff2CtpGUVue4nmqekBluiaeUbxyCpkrsCBoz0VcaetaSb2xVl+DfvAQQKOblypEO7Zkb1vVtMVM3tOdtFs6TUCBNPh1Bq4G5/vBCFJsUxscRHrAmdBjDBsvYP67/Jfs1d4NIo45hj3eWyI2FTpRWozE7xWM7Cp+aHfAmFfUJ+zgMikx1UI2k21qnz/AfTCE6c90t6Do/LdToSu1ngapAnWagGoXsLfaXZgj3Achp1GW/D2nY+qdxN0l3SREo3gXfybobfRvoN+4Rh2a
+U2FsdGVkX1+ttzMcTT5Iucy/UOP8buEDFpfjGNnt+UMvmnhuFOCkA54Tj4Igax8TAVM8O44DRqj2cLdK8BMK8+fRY+oULONZfG0kNeWFJbW4A5VcOzxw71WlowoRkiG8gKYGCnQl65YF2DPhkGYxuhWCT6ZcGLxuW0m8MSeGqgU86HYbwgs07cxiqKyhAgq4L2GMNb1/4Ae8p3WY/UXzuWFGQb0BtUjwmskwY48a41Q+oVwvBoPHLviKmllay8d8NBroFzFMqt3w4w6EY5M/C3dBNNciuSo+ApPRBOGq6QEDRD22tpfNduw0hH+21DSoRSLO1za3sJQsydy+ig6TMU/SYOyh0sfmLQ05px9k/cJ+QgMKXtFQ6X6Z9+63WA5uDT+UKJLq6eIGpzJJYZ7fiuO5vTYCK7XOfZsLcS75171lyUB9/bmyojmWekBDE59R+6n/bpywgf1jY3l5cKxLL47gBAyUFSwV4rb0iqhS9RW2XBPgVrDJzIs4OREgP1XRnEqRO245WtIJDpZJP5PLJ1iKncl3xpcleJG4siNLdYNooRF4eD8yD11xq9QMe+E7h1+79exdTZPa5JbQ/sPKxmXwQ7KgdHEyttwovp2w/LI4/IvcpOsvJ4UdKijGi+5U
 </div>
 <script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
       
@@ -246,6 +252,19 @@ U2FsdGVkX18zbhL5yl1E76KG6KcaiWOGEdJ90MLo1AAdwqsKkj2hojkfOqbA0BXevZ3u93XokMK/r1Ca
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -290,7 +309,7 @@ U2FsdGVkX18zbhL5yl1E76KG6KcaiWOGEdJ90MLo1AAdwqsKkj2hojkfOqbA0BXevZ3u93XokMK/r1Ca
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
