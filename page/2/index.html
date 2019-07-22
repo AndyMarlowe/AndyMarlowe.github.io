@@ -140,6 +140,76 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-避免不必要的比较" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/15/避免不必要的比较/">JBC 1.1避免不必要的比较</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/15/避免不必要的比较/" class="archive-article-date">
+  	<time datetime="2019-07-15T13:30:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Laboratory</span> </span>{</span><br><span class="line"></span><br><span class="line">	Microscope microscope;</span><br><span class="line">	</span><br><span class="line">	<span class="function">Result <span class="title">analyze</span><span class="params">(Sample sample)</span> </span>{</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(microscope.isInorgaic(sample) == <span class="keyword">true</span>) {</span><br><span class="line"></span><br><span class="line">			<span class="keyword">return</span> Result.INORGANIC;</span><br><span class="line">		} <span class="keyword">else</span> {</span><br><span class="line">			<span class="keyword">return</span> analyzeOrganic(sample);</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span>  Result <span class="title">analyzeOrganic</span><span class="params">(Sample sample)</span> </span>{</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(microscope.isHumanoid(sample) == <span class="keyword">false</span>) {</span><br><span class="line">			<span class="keyword">return</span> Result.ALIEN;</span><br><span class="line">		</span><br><span class="line">		} <span class="keyword">else</span> {</span><br><span class="line"></span><br><span class="line">			<span class="keyword">return</span> Result.HUMANOID;</span><br><span class="line">		}</span><br><span class="line"></span><br><span class="line">	}</span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+
+<p>&#x4F60;&#x5B66;&#x4E60;&#x5199;&#x8FC7;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x903B;&#x8F91;&#x6761;&#x4EF6;&#x53EF;&#x80FD;&#x7531;&#x6574;&#x6570;&#x548C;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;&#x7EC4;&#x6210;&#xFF0C;&#x5E76;&#x4E14;&#x4E00;&#x540D;&#x521D;&#x5B66;&#x8005;&#x5F88;&#x53EF;&#x80FD;&#x4F1A;&#x4F7F;&#x7528;&#x540C;&#x6837;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5B9E;&#x73B0;&#x5E26;&#x5E03;&#x5C14;&#x503C;&#x7684;&#x6761;&#x4EF6;&#x3002;<br>&#x4F46;&#x662F;&#x8FD9;&#x4E9B;&#x6BD4;&#x8F83;&#x662F;&#x5B8C;&#x5168;&#x4E0D;&#x5FC5;&#x8981;&#x7684;-&#x5B83;&#x4EEC;&#x5C31;&#x50CF;&#x4F60;&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x566A;&#x97F3;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x4F60;&#x770B;&#x5230;<code>Laboratory</code>&#x7EC4;&#x4EF6;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5B83;&#x4EEC;&#x901A;&#x8FC7;&#x4E24;&#x4E2A;&#x5D4C;&#x5957;&#x7684;if-else&#x4EE3;&#x7801;&#x5757;&#x4E2D;&#x7684;&#x6761;&#x4EF6;&#x6765;&#x5206;&#x6790;<code>Sample</code>.</p>
+<p>&#x8FD9;&#x91CC;&#x7684;&#x4EE3;&#x7801;&#x663E;&#x5F0F;&#x5730;&#x6BD4;&#x8F83;&#x5E03;&#x5C14;&#x8FD4;&#x56DE;&#x503C;&#x548C;&#x5E03;&#x5C14;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#xFF08;true&#x548C;false&#xFF09;&#x3002;&#x8FD9;&#x662F;&#x4F60;&#x7ECF;&#x5E38;&#x53EF;&#x4EE5;&#x5728;&#x521D;&#x5B66;&#x8005;&#x5199;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x770B;&#x5230;&#x7684;&#x53CD;&#x6A21;&#x5F0F;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F7F;&#x7528;&#x5E03;&#x5C14;&#x7C7B;&#x578B;&#x4EE5;&#x5916;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x6784;&#x9020;&#x903B;&#x8F91;&#x6761;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982;&#x4F7F;&#x7528;&#x6574;&#x578B;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x628A;&#x5B83;&#x4EEC;&#x548C;&#x5B9E;&#x9645;&#x503C;&#x6BD4;&#x8F83;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;myNumber == 25&#xFF0C;input &gt; 0&#xFF09;&#x3002;<br>&#x4F46;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x5BF9;&#x5E03;&#x5C14;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x548C;&#x8FD4;&#x56DE;&#x503C;&#x4E5F;&#x8FD9;&#x4E48;&#x505A;&#x3002;</p>
+        
+          <a class="article-more-a" href="/2019/07/15/避免不必要的比较/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/15/避免不必要的比较/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-比学Java1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
